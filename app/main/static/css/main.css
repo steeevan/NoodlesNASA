@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+.team-section {
+    text-align: center;
+    margin-top: 50px;
+}
+.team-member {
+    margin: 20px;
+    display: inline-block;
+}

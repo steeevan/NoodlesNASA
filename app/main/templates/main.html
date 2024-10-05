@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <title>NASA Orrery - Team Page</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="team-section">
+        <h1>Meet Our Team</h1>
+        <div class="team-member">
+            <img src="{{ url_for('static', filename='images/member1.jpg') }}" alt="Team Member Photo">
+            <h2>Member Name</h2>
+            <p>Role: Developer</p>
+            <p>Bio: Description of the team members background and expertise.</p>
+        </div>
+    </div>
+    <button onclick="window.location.href='/asteroids'">Explore Near-Earth Objects</button>
+    <script>
+        particlesJS.load('particles-js', "{{ url_for('static', filename='js/particles.json') }}", function() {
+            console.log('Particles.js loaded');
+        });
+        gsap.from('.team-member', { duration: 2, opacity: 0, y: 50, stagger: 0.3 });
+    </script>
+    
+</body>
+</html>
